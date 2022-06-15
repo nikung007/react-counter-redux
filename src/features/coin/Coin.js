@@ -1,10 +1,15 @@
+import { useSelector } from 'react-redux'
+
 import React from 'react'
 
 function Coin() {
+
+    const count = useSelector((state) => state.counter.count);
+
   return (
     <div className='btn'>
 
-        <span>Coin : 0</span>
+        <span>Coin : {count}</span>
 
     </div>
   )
